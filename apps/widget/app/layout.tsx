@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 const font = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: { default: "Web", template: "%s ♡" }
+  title: { default: "Widget", template: "%s ♡" }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
