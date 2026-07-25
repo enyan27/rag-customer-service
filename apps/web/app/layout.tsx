@@ -1,0 +1,21 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import "@workspace/ui/globals.css";
+import { cn } from "@workspace/ui/lib/utils";
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+const font = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
+export const metadata: Metadata = {
+  title: { default: "♡", template: "%s ♡" }
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(font.className, "antialiased")}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  );
+}
