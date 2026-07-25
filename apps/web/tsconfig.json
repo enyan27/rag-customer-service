@@ -3,6 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
+      "@workspace/backend/*": ["../../packages/backend/convex/*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"]
     },
     "plugins": [
