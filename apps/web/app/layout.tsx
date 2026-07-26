@@ -1,5 +1,6 @@
-import { ConvexClientProvider } from "@/components/convex-client-provider";
+import { ConvexProvider } from "@/components/convex-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 import "@workspace/ui/globals.css";
 import { cn } from "@workspace/ui/lib/utils";
 import { Metadata } from "next";
@@ -15,9 +16,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(font.className, "antialiased")}>
-        <ConvexClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </ConvexClientProvider>
+        <ClerkProvider>
+          <ConvexProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </ConvexProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
