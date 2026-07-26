@@ -1,3 +1,5 @@
+import { AuthLayout } from "@/modules/auth/ui/layouts/auth-layout";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-svh grid place-items-center">{children}</div>;
+  return <AuthLayout>{children}</AuthLayout>;
 }
