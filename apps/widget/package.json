@@ -17,7 +17,7 @@
     "@vapi-ai/web": "^2.6.1",
     "@workspace/backend": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "convex": "^1.42.3",
+    "convex": "^1.25.4",
     "jotai": "^2.15.5",
     "jotai-family": "^1.0.2",
     "lucide-react": "^1.26.0",
