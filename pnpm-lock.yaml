@@ -32,6 +32,12 @@ importers:
       '@clerk/nextjs':
         specifier: ^7.6.1
         version: 7.6.1(next@16.2.6(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@convex-dev/agent':
+        specifier: 0.1.16
+        version: 0.1.16(ai@4.3.19(react@19.2.4)(zod@4.4.3))(convex-helpers@0.1.120(@standard-schema/spec@1.1.0)(convex@1.42.3(@clerk/react@6.12.8(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4))(hono@4.12.32)(react@19.2.4)(typescript@5.9.3)(zod@4.4.3))(convex@1.42.3(@clerk/react@6.12.8(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4))(react@19.2.4)
+      '@hookform/resolvers':
+        specifier: ^5.5.7
+        version: 5.5.7(@standard-schema/spec@1.1.0)(ajv-formats@2.1.1(ajv@8.20.0))(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.4))(zod@4.4.3)
       '@workspace/backend':
         specifier: workspace:*
         version: link:../../packages/backend
@@ -65,9 +71,15 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
+      react-hook-form:
+        specifier: ^7.83.0
+        version: 7.83.0(react@19.2.4)
       react-resizable-panels:
         specifier: ^4.12.2
         version: 4.12.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -280,6 +292,9 @@ importers:
       react-markdown:
         specifier: ^10.1.0
         version: 10.1.0(@types/react@19.2.15)(react@19.2.4)
+      react-resizable-panels:
+        specifier: ^4.12.2
+        version: 4.12.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       remark-gfm:
         specifier: ^4.0.1
         version: 4.0.1
