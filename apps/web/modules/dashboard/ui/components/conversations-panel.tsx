@@ -140,7 +140,7 @@ export const ConversationsPanel = () => {
                         <span
                           className={cn(
                             "line-clamp-1 text-muted-foreground text-xs",
-                            !isLastMessageFromOperator && "font-bold text-black"
+                            !isLastMessageFromOperator && "font-bold"
                           )}
                         >
                           {conversation.lastMessage?.text}
