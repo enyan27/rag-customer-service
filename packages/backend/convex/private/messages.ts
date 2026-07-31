@@ -1,4 +1,4 @@
-import { google } from "@ai-sdk/google";
+import { openai } from "@ai-sdk/openai";
 import { saveMessage } from "@convex-dev/agent";
 import { generateText } from "ai";
 import { paginationOptsValidator } from "convex/server";
@@ -31,7 +31,7 @@ export const enhanceResponse = action({
     }
 
     const response = await generateText({
-      model: google("gemini-2.5-flash"),
+      model: openai("gpt-4o-mini"),
       messages: [
         {
           role: "system",
@@ -93,6 +93,12 @@ export const create = mutation({
       throw new ConvexError({
         code: "BAD_REQUEST",
         message: "Conversation resolved"
+      });
+    }
+
+    if (conversation.status === "unresolved") {
+      await ctx.db.patch(args.conversationId, {
+        status: "escalated"
       });
     }
 
