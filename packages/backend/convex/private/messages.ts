@@ -1,4 +1,4 @@
-import { openai } from "@ai-sdk/openai";
+import { google } from "@ai-sdk/google";
 import { saveMessage } from "@convex-dev/agent";
 import { generateText } from "ai";
 import { paginationOptsValidator } from "convex/server";
@@ -31,7 +31,7 @@ export const enhanceResponse = action({
     }
 
     const response = await generateText({
-      model: openai("gpt-4o-mini"),
+      model: google("gemini-3.5-flash-lite"),
       messages: [
         {
           role: "system",
