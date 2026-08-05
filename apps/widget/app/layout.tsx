@@ -16,7 +16,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <body className={cn(font.className, "antialiased")}>
         <ConvexClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <div className="w-screen h-screen">{children}</div>
+          </ThemeProvider>
         </ConvexClientProvider>
       </body>
     </html>
