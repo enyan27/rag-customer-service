@@ -17,7 +17,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(font.className, "antialiased")}>
-        <ClerkProvider>
+        <ClerkProvider
+          appearance={{
+            variables: {
+              colorPrimary: "#3C82F6"
+            }
+          }}
+        >
           <ConvexProvider>
             <ThemeProvider>
               {children}
