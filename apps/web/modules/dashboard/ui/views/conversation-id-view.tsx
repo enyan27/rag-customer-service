@@ -30,6 +30,7 @@ import { useAction, useMutation, useQuery } from "convex/react";
 import { MoreHorizontalIcon, Wand2Icon } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 import { ConversationStatusButton } from "../components/conversation-status-button";
 
@@ -72,6 +73,7 @@ export const ConversationIdView = ({ conversationId }: { conversationId: Id<"con
 
       form.setValue("message", response);
     } catch (error) {
+      toast.error("Something went wrong");
       console.error(error);
     } finally {
       setIsEnhancing(false);
